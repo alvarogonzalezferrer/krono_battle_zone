@@ -1,0 +1,9 @@
+Since is quite hard to compile this on 2020, I decided to include a pre-compiled binary file + data (sprites, gfx, etc)
+
+You can drop this release into a DOS machine, or DOSBOX emulator, and it will run, and you will play.
+
+To compile yourself, you need the DJGPP GCC + Allegro 4 toolchain + MS-DOS or DOSBOX
+
+Thanks
+
+20-03-2020
