@@ -1,0 +1,52 @@
+Documento version beta-sujeto a cambios
+
+KRONO'S BATTLE ZONE
+------- ------ ----
+
+EMPEZADO: 28-D-2000
+
+POR KRONOMAN
+
+PROYECTO:
+Crear un juego tipo BATTLEZONE, en DJGPP para DOS, se puede jugar
+de a 2 jugadores. Para jugar de a un jugador, utiliza el modo de pantalla
+de 320x240; para 2 jugadores, 320x480 (ambos son modos X de la VGA standard)
+en 256 colores.
+
+La idea es matarse uno al otro usando el tanquecito
+Pueden rotar la cupula, y adquirir diferentes power-ups.-
+
+El mapa es generado al azar, de 1000x1000 pixels, dividido en una grilla
+de 50x50 (20x20 pixels cada cuadradito) que contiene info del tipo de piso,
+ademas, de la cantidad de energia que le queda al tipo de obstaculo, ya que
+TODO el mapa es deformable a ca¤onazos (o sea, se puede romper las paredes)
+
+Se usa una paleta de 256 colores, la misma que para el DUKE 3D
+
+El sprite del jugador es de 25x25 (ambos, cuerpo y torreta)
+
+Tipos de piso (al lado, la energia):
+------------------------------------
+// tipos de piso basico
+// primero lleno el mapa con esto, y 'mezclo' los bordes
+// para dar una sensacion mas suave del terreno
+0 = piso, transitable (tierra/pasto)
+1 = agua, transitable,  disminuye la velocidad del tanque a 1/5
+2 = barro, transitable, disminuye la velocidad a 1/2
+// estos son impenetrables, hay que romperlos para pasar
+// una vez creado el piso del mapa, agrego una especie de
+// laberinto con estos materiales.-
+3 = madera, 10
+4 = ladrillo, 30
+5 = roca gris, 50
+6 = roca naranja, 100
+7 = granito, 200
+
+Tipos de arma y energia que saca cada disparo:
+----------------------------------------------
+Ametralladora, 3
+Ca¤on, 10
+Ca¤on potente, 15
+Lanzallamas, 20
+Penetrador, 30
+

@@ -1,0 +1,40 @@
+Descripcion de la paleta de colores usada
+para el juego en Kronoman's Battle Zone
+
+0-31  negro a blanco
+
+32-63  negro a marron claro
+
+64-79  azul oscuro a azul muy claro
+
+80-95  negro a azul muy oscuro
+
+96-111 negro a verde militar
+
+112-127 continua verde hacia verde clarisimo
+
+128-143 negro a rojo
+
+144-159 amarillo oscuro a amarillo claro
+
+160-175 negro a marron grisaceo
+
+176-191 marron grisaceo (cont de 175) a marron carne
+
+192-223 naranja osc. a naranja m. claro
+
+224-239 negro a violeta a rojo
+
+240,241,242 = amarillo osc, medio y puro
+
+243,244,245 = violeta osc, medio y puro (pink)
+
+246,247,248 = rojo osc, medio y puro
+
+249,250,251 = verde osc, medio y puro
+
+252,253,254 = azul osc, medio y puro
+
+255 = violeta puro (pink: RGB:255,0,255) = 245
+
+

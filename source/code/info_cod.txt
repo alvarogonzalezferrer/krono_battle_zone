@@ -1,0 +1,118 @@
+//--------------------------------------------------------
+// Info de codigo fuente y debug...
+//--------------------------------------------------------
+
+KRONO'S BATTLE ZONE
+-------------------
+Parametros:
+[pasar en minusculas!]
+
+-debug   Activa el modo debug
+
+Efectos:
+
+-noluz = desactiva las luces
+-l0 = modo de luz renderizada suave, aditiva [DEFAULT]
+-l1 = modo de luz renderizada suave, NO aditiva [ANDA MAL]
+-l2 = modo de luz no renderizada, aditiva [RAPIDO!]
+
+-nosplit = no parte la pantalla
+
+Video [durante el juego]
+
+-rVGA = modo VGA 320x200 [DEFAULT = RAPIDO!]
+
+-r320240 -+
+-r320400  |
+-r320480  |
+-r320600  |
+-r360200  |-- Todos MODOS-X de la VGA - Lentos pero algunos lindos! ;^)
+-r360240  |   Andan en *casi* cualquier VGA (creo que en todas...)
+-r360360  |
+-r360400  |
+-r360480  |
+-r360600 -+
+
+-r640480  Ambos modos de VESA 1.0 o superior.
+-r800600  Requieren mucha memoria, son lentos, se ven bien, pero
+          le quitan gracia al juego por ser muy grande el area de vision.
+
+Recomiendo dejar el modo VGA default para maximo rendimiento incluso en un 486
+640x480 para jugar de a dos se ve muy bien
+
+//--------------------------------------------------------
+// Codigo fuente creado en DJGPP + Allegro
+// Informacion de las rutinas contenidas en el codigo fuente:
+//--------------------------------------------------------
+
+datahead.h    Header del archivo .DAT generado por GRABBER.EXE
+
+videom.h      Header de los modos de video que soporta el juego
+              cuando estamos jugando (320x200, 640x480, 800x600
+              y otros NO standard, como 320x240, 320x480, etc)
+
+principa.c    Es el nucleo del programa 
+principa.h    Inicia las tablas, Allegro, video, etc
+              Contiene el menu principal e inicia el juego.-
+              **NOTA** El grafico de fondo, las fuentes
+              que se usaron son: RUBBER STAMP para el titulo
+              y TIFFANY VT BOLD para los items del menu.-
+
+startgam.c    Contiene las rutinas que generan los mapas aleatorios
+startgam.h    y setean el juego para empezar. O sea, las rutinas
+              para empezar a jugar.- 
+              Contiene la rutina DEBUG para mirar el mapa libremente
+              y la posicion de los tanques.
+
+game.c        Rutinas principales del juego.  
+game.h        ESTO ES BASICAMENTE EL MOTOR DE JUEGO DEL PROGRAMA!!!  
+              IGUALMENTE SE APOYA EN LAS RUTINAS DEL RESTO DE LOS .c  
+
+angulo.c      Contiene las rutinas de trigonometria para calcular
+angulo.h      las posiciones de x,y pasando largo y angulo, y
+              definiciones de PI/180, 255/360, y conversion
+              de angulos (0-360) a (0-255) y viceversa, ademas
+              de un par de cosas mas (numeros aleatorios, etc). 
+
+poligono.c    Rutinas para crear y administrar, comprobar, etc
+poligono.h    el cuerpo poligonal del jugador. MUY UTILES!
+
+
+efectos1.c    Efectos basicos del juego: huellas del tanque
+efectos1.h    y el proyector de particulas dinamicas, ademas
+              de destruccion del terreno.
+
+luces.c       Sistema de iluminacion dinamico
+luces.h
+
+mapluz.c      Rutinas para crear los sistemas RGB aditivos
+              de apoyo al sistema de iluminacion dinamico,
+              como el aditivo color y aditivo gris, y
+              la paleta de 256 tonos de gris.-
+
+tablero.c     Dibuja el tablero (energia, radar, etc)
+
+explos.c      Proyector de explosiones y administracion
+explos.h      de las mismas.
+
+disparos.c    Rutinas de administracion de los disparos
+disparos.h    de los jugadores e informacion de las armas
+              y los sprites que las representan.
+
+clima.c       Rutinas del clima (nieve, lluvia, niebla, etc)
+clima.h
+
+premios.c     Rutinas de premios del juego (botiquin, armas, mapa, etc)
+premios.h
+
+pc_ia.c       Rutinas de inteligencia artificial para el jugador de la PC
+pc_ia.h
+
+k_gui.c       Rutinas graficas de ventanas (GUI) de apoyo para menues.c
+
+menues.c      Rutinas de los menu del juego (opciones, juego nuevo, etc)
+
+config.c      Rutinas de lectura/escritura de la configuracion
+
+sonido        Modulo de sonido
+//--------------------------------------------------------

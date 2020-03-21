@@ -1,0 +1,69 @@
+Sonidos para Kronoman's Battle Zone
+Marcados con (*) los ya grabados.
+
+Clima (loopings)
+(*) SND_NORMAL
+(*) SND_LLUVIA
+(*) SND_NIEVE 
+(*) SND_ARENA 
+(*) SND_GRANIZO
+(*) SND_NIEBLA
+
+Motor de los tanques: (2, iguales, para poder ajustarlos por separado de acuerdo a la velocidad del tanque)
+(*) SND_MOTOR1
+(*) SND_MOTOR2
+NOTA: el sonido de los motores debe ser grabado a 8000 Hz,
+ya que cuando alcanza velocidad maxima, se transportan a 22100 Hz
+
+Armamento:
+(*) SND_AMETRALLADORA (mas tipo un cañon pedorro)
+(*) SND_CANON    (bola de fuego)     
+(*) SND_LASER         
+(*) SND_PLASMA        
+(*) SND_LANZALLAMAS   
+(*) SND_TRIPLE_SHOOT  
+
+Gritos de muerte:
+( ) SND_DEATH1
+( ) SND_DEATH2
+( ) SND_DEATH3
+( ) SND_DEATH4
+( ) SND_DEATH5
+( ) SND_DEATH6
+
+Click del mouse:
+( ) SND_CLICK
+
+Premios:
+( ) SND_ARMA_NUEVA
+( ) SND_MEDIKIT
+( ) SND_RADAR     
+( ) SND_INVISIBLE
+( ) SND_ESCUDO
+( ) SND_LUZ      
+( ) SND_VELOCIDAD
+
+Explosiones:
+( ) SND_EXPLO1
+( ) SND_EXPLO2
+( ) SND_EXPLO3
+( ) SND_EXPLO4
+
+Chispazos en pared
+( ) SND_CHISPA1
+( ) SND_CHISPA2
+( ) SND_CHISPA3
+( ) SND_CHISPA4
+
+Chispazos en metal del tanque
+( ) SND_METAL1
+( ) SND_METAL2
+( ) SND_METAL3
+( ) SND_METAL4
+
+Pared rompiendose
+( ) SND_WALL1
+( ) SND_WALL2
+( ) SND_WALL3
+( ) SND_WALL4
+

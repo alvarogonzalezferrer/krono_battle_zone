@@ -1,0 +1,223 @@
+Kronoman's Battle Zone
+
+Manual del usuario
+
+Revision: 25/12/01 04:00p.m.
+
+Escrito por Kronoman - (c) 2001, KronoCorp
+En memoria de mi querido padre
+
+
+LICENCIA DE USO DE ESTE SOFTWARE
+
+IMPORTANTE-LEA CUIDADOSAMENTE
+Este Kronoman's Battle Zone(r) Acuerdo de licencia para
+el usuario final es un acuerdo legal entre usted (USUARIO)
+y KRONOMAN e incluye componentes de software,
+medios, materiales adjuntos, documentacion, ("SOFTWARE")
+Instalando, copiando, o usando de otra forma el SOFTWARE, 
+usted acepta los terminos de esta licencia.
+Si usted no los acepta, no instale o use el SOFTWARE. 
+Si el software ya esta instalado, desinstalelo inmediatamente.
+
+1. El SOFTWARE es licenciado, no vendido o regalado.
+
+2. TERMINOS DE LA LICENCIA.
+
+(a)Usted puede usar el SOFTWARE cuanto desee dentro de los terminos
+   de esta licencia.
+
+(b)No puede VENDER, ARRENTAR, RENTAR, o OBTENER NINGUNA GANANCIA MONETARIA O
+   PRODUCTIVA DEL USO/DESUSO/ABUSO o CUALQUIER OTRO RELACIONADO CON
+   ESTE SOFTWARE
+
+(c)No puede utilizar este SOFTWARE EN CONTRA DE LAS LEYES DE SU PAIS O CON
+   FINES RASCISTAS, BELICOS O SIMILARES
+
+(D) ESTE SOFTWARE ES GRATUITO, DEBE SER SUMINISTRADO A QUIEN LO DESEE SIN
+    NINGUN TIPO DE CARGO O GANANCIA.
+
+3. RESTRICIONES. NO PUEDE HACER INGENIERIA INVERSA, DESCOMPILAR, DESENSAMBLAR
+   O IMITAR EL ASPECTO Y/O USO Y/O FUNCIONAMIENTO DE ESTE SOFTWARE, 
+   USTED NO PUEDE RENTAR, VENDER O COMPRAR ESTE SOFTWARE
+   NO DEBE USAR ESTE SOFTWARE PARA REALIZAR NINGUN TIPO DE ACCION ILEGAL
+
+4. COPYRIGHT. ESTE SOFTWARE ESTA PROTEGIDO POR LA LEY NACIONAL DE PROPIEDAD
+   INTELECTUAL Y LAS LEYES DE DERECHO DE AUTOR INTERNACIONALES CORRESPONDIENTES
+
+5. NO EXISTEN GARANTIAS. 
+   KRONOMAN EXPRESAMENTE DENIEGA CUALQUIER GARANTIA POR EL SOFTWARE. 
+   ESTE SOFTWARE Y COMPONENTES RELACIONADOS SON PROVEIDOS "COMO SON"
+   SIN GARANTIAS DE NINGUN TIPO, EXPRESAS O IMPLICITAS, INCLUYENDO, PERO NO 
+   LIMITANDO, GARANTIAS IMPLICITAS O MERCADOTECNICAS, USO PARA UN TRABAJO
+   PARTICULAR, O UTILIDAD. 
+   EL ENTERO RIESGO DEL USO O PERFORMANCE DE ESTE SOFTWARE CORRE
+   POR CUENTA DEL USUARIO.
+
+6. LIMITACION DE RESPONSABILIDAD.
+   EN NINGUN CASO DEBE KRONOMAN O SUS ASOCIADOS SER RESPONSABILIZADOS
+   DE NINGUNA CONSECUENCIA, ESPECIAL, INCIDENTAL O DAÑOS DIRECTOS Y/O
+   INDIRECTOS DE CUALQUIER TIPO DEL MANEJO, 
+   PERFORMANCE, USO DE ESTE SOFTWARE, AUN SI KRONOMAN CONOCIA
+   LA POSIBILIDAD DE TALES DAÑOS.
+   EN CUALQUIER CASO, LA RESPONSABILIDAD DE KRONOMAN POR
+   CUALQUIER RECLAMO, SOBRE EL SOFTWARE, SEA PRESUMIDA, O CUALQUIER
+   OTRA TEORIA DE RESPONSABILIDAD/CULPABILIDAD, NO EXCEDERA DE
+   UN MONTO MAYOR DE US$ 1.0 (UN DOLAR AMERICANO)
+
+7. ESTE SOFTWARE NO PUEDE SER USADO POR EL GOBIERNO O ASOCIACIONES
+   RELACIONADAS CON EL MISMO
+
+8. MISCELANEAS. 
+   ESTE CONTRATO SE RIGE POR LAS LEYES DE LA REPUBLICA ARGENTINA.
+
+9. TERMINACION DE ESTE CONTRATO. 
+   SIN PERJUICIO DE NINGUN OTRO DERECHO, KRONOMAN PUEDE
+   DAR POR TERMINADO ESTE CONTRATO SI USTED NO CUMPLE LOS TERMINOS Y CONDICIONES
+   DEL MISMO O SI KRONOMAN ASI LO DESEA. EN ESE CASO,
+   USTED DEBE DESTRUIR TODAS LAS COPIAS DE ESTE SOFTWARE.
+
+
+
+Requerimientos:
+
+El juego precisa un 386 con 4Mb de RAM, disco rigido con 2Mb libres,
+sistema operativo DOS y placa de video VGA con una resolucion de 320x240
+a 256 colores.
+Se recomienda un 486DX2 con 8Mb de RAM o mejor, disco rigido con 8Mb libres
+y sistema operativo DOS 6.0 o superior, y placa de video VESA 2.0 a 640x480
+con 256 colores.
+
+
+Introduccion:
+
+Kronoman's Battle Zone, de ahora en mas 'KRBZ', es un juego de accion
+para uno o dos jugadores, donde el objetivo es eliminar al oponente.
+No existe un limite de tiempo, o cantidad de muertes, dejando esto
+a la decision de los jugadores.
+Esta pensado principalmente para que jueguen dos jugadores, pero
+tambien puede jugarse en contra de la computadora.
+Usted tiene varias armas y premios para ayudarse en la lucha contra su
+oponente.
+
+Como jugar:
+
+El juego en si, se controla mediante el teclado.
+Durante el juego, presione ESC para finalizar la partida, y PAUSE para
+pausar el juego (ENTER para continuar).
+En el modo 'debug', F9, F10, F11 y F12 sirven para diferentes cosas.
+Debera experimentar...
+
+Las teclas de los jugadores son:
+Jugador 1 [pantalla superior, o toda la pantalla en caso de jugar vs CPU]:
+
+Mover el tanque: Flechas IZQ, DER, ARR, ABJ
+Torreta: INS disparar, DEL apagar/prender luces (solo de noche),
+         HOME, PG_UP rotar torreta
+
+Jugador 2 [pantalla inferior]:
+
+Mover el tanque: U,H,K,J
+Torreta: Q disparar, A apagar/prender luces (solo de noche),
+         W, E rotar torreta
+
+Si esta viendo una demostracion, ESC finaliza la demostracion.
+
+Configuracion:
+
+El el panel 'OPCIONES' del menu principal existen las opciones del juego,
+que son:
+Nivel de detalle grafico: cuanto menor sea el detalle, mas rapido funcionara
+el juego, pero perdera calidad grafica. Si usted tiene un 486 o superior,
+se recomienda dejar el nivel de detalle al maximo.
+
+Resolucion de video: esto es la resolucion de video del juego.
+Yo recomiendo usar 640x480 para jugar de a dos jugadores, y 320x200 para
+jugar vs el CPU.
+Los modos superiores a 320x200 son VESA 2.0, y algunas placas de video
+precisan el driver UNIVBE instalado para ejecutarlos.
+Consulte la documentacion de su placa de video.
+
+Nivel de dificultad: esto afecta la punteria y agresividad del CPU al jugar
+de a uno solo, o al ver la demostracion.
+
+Ademas de estas opciones, el juego tolera parametros de la linea de comandos,
+que paso a detallar.
+Para poner cualquiera de estos comandos, escriba desde la linea de comandos,
+el nombre del ejecutable KRONOBZ [parametros]; ej: KRONOBZ -r640480
+
+Parametros:
+
+-debug   Activa el modo debug
+
+Efectos:
+
+-noluz = desactiva las luces
+-l0 = modo de luz renderizada suave, aditiva [DEFAULT]
+-l1 = modo de luz renderizada suave, NO aditiva [ANDA MAL]
+-l2 = modo de luz no renderizada, aditiva [RAPIDO!]
+
+-nosplit = no parte la pantalla 
+
+Video [durante el juego]
+
+-rVGA = modo VGA 320x200 [DEFAULT = RAPIDO!]
+
+-r320240 -+
+-r320400  |
+-r320480  |
+-r320600  |
+-r360200  |-- Todos MODOS-X de la VGA - Lentos pero algunos lindos! ;^)
+-r360240  |   Andan en *casi* cualquier VGA (creo que en todas...)
+-r360360  |
+-r360400  |
+-r360480  |
+-r360600 -+
+
+-r640480  Ambos modos de VESA 2.0 o superior.
+-r800600  Requieren mucha memoria, son lentos, se ven bien, pero
+          le quitan gracia al juego por ser muy grande el area de vision.
+
+Recomiendo dejar el modo VGA default para maximo rendimiento incluso en un 486
+640x480 para jugar de a dos se ve muy bien
+
+
+
+Kreditos:
+
+Krono's Battle Zone
+Una Produccion De KronoCorp
+Kreado Por Kronoman
+(c) Diciembre 2000 - Enero 2002
+Hecho En Argentina - Freeware
+
+Gracias a mis padres por regalarme mi primera computadora!!!!
+
+Saludos A:
+Victoria,Yaco,SkaarjScout,Iron Chelo,Dj Nanga,Poroto,J Monytor,
+BloodyMary,El Mago Eddy,Super666,Veronica, Yunni y Claudia,
+
+
+PROGRAMA FREEWARE (GRATIS)
+En memoria de mi padre,
+(c) 2000-2002, KronoCorp
+
+A todos mis amigos, familiares y demas que probaron este juego
+y sugirieron muchas correciones.
+
+
+Miscelaneas:
+
+Para los que les interese, este juego fue realizado usando las siguientes
+herramientas:
+
+* Compilador de C/C++ DJGPP
+* Libreria grafica Allegro
+* Editor de graficos The GIMP
+* Editor de codigo y texto Rhide
+* Compresor de ejecutables UPX
+* Compresor de archivos PowerArchiver
+* Convertidor de paleta FIXPal
+
+Todas son herramientas gratuitas y pueden ser descargadas de internet.
+
