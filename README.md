@@ -18,7 +18,14 @@ Year 2001 - Released to the public March 2020
 
 ## Screenshots
 
-**TODO** not done yet
+Playing the game
+
+![Battle zone!](screenshoots/movie01.gif)
+
+![Battle zone!](screenshoots/movie02.gif)
+
+![Battle zone!](screenshoots/movie03.gif)
+
 
 ## Requirements
 
