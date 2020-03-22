@@ -6,6 +6,20 @@ For DOSBOX / MS-DOS, made with C, DJGPP + Allegro 4.
 
 Year 2001 - Released to the public March 2020
 
+## Features
+
+* up to 2 players, split-screen or versus computer
+* weather effects: rain, snow, day / night, fog, sand storm, hail storm, etc
+* power ups : shield, weapons, radar, repairs, etc
+* terrain can be destroyed!
+* random terrain : grass, snow, sand, mud, etc
+* huge random battle zone
+* there is NO sound yet, never finished it!
+
+## Screenshots
+
+**TODO** not done yet
+
 ## Requirements
 
 (**Old info**, year 2020 I recommend to use **DOSBOX emulator** instead of a real DOS machine)
