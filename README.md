@@ -62,24 +62,31 @@ If you are watching a demo, ESC ends the demo.
 
 ## Command line parameters
 
+```
 -debug Activate debug mode
+```
 
 Effects:
 
+```
 -noluz = disable lights
 -l0 = additive soft rendered light mode [DEFAULT]
 -l1 = soft rendered light mode, NOT additive [WRONG]
 -l2 = light mode not rendered, additive [QUICK!]
 
 -nosplit = does not split the screen
+```
 
 Video modes:
 
+```
 -rVGA = VGA 320x200 mode [DEFAULT = FAST!]
+```
 
 All VGA X-MODES - Slow but some cute! ; ^)
 They run on * almost * any VGA (I think all ...)
 
+```
 -r320240
 -r320400
 -r320480
@@ -98,6 +105,7 @@ They run on * almost * any VGA (I think all ...)
 I recommend leaving the VGA mode default for maximum performance even on a 486
 
 640x480 to play two looks great
+```
 
 ## TODO list
 
@@ -145,11 +153,11 @@ The compilation in a real 486DX2 lasts about 10 minutes, so be patient.
 
 ### Windows
 
-TODO needs to be ported yet
+**TODO** needs to be ported yet
 
 ### Linux
 
-TODO needs to be ported yet
+**TODO** needs to be ported yet
 
 ### Assets
 
