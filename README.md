@@ -114,7 +114,37 @@ I recommend leaving the VGA mode default for maximum performance even on a 486
 
 ### DOSBOX / MS-DOS
 
-TODO add instructions to compile for MS-DOS using DOSBOX and DJGPP toolchain 
+TODO add instructions to compile for MS-DOS using DOSBOX and DJGPP toolchain
+
+You would need the following files for your toolchain:
+
+Get them at : http://www.delorie.com/djgpp/
+
+1. DOSBOX or a real MS-DOS machine (old hardware)
+
+2. Allegro 4 game library for MS DOS
+  all422ar2.zip -- Allegro 4
+  all422br2.zip -- Allegro 4
+
+3. DJGPP C compiler and tools
+  bnu234b.zip
+  csdpmi7b.zip
+  djdev205.zip
+  gcc920b.zip
+  gpp920b.zip
+  mak43b.zip
+
+4. Misc tools
+
+  unzip32.exe -- Optional to unpack under MS-DOS
+  upx-3.96-dos.zip -- Optinal to pack the .exe
+  vc405sw.zip -- Volkov Commander - SUPER OPTIONAL TO MANAGE FILES UNDER MS-DOS
+
+Install everything in your MS DOS box (or DOSBOX), test if the compiler works and is properly set-up per DJGPP instructions.
+
+Then go to source/code and run **make.bat**
+
+The compilation in a real 486DX2 lasts about 10 minutes, so be patient.  
 
 ### Windows
 
