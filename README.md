@@ -133,8 +133,8 @@ Get them at : http://www.delorie.com/djgpp/
   * mak43b.zip
 
 4. Misc tools
-  * unzip32.exe -- Optional to unpack under MS-DOS
-  * upx-3.96-dos.zip -- Optinal to pack the .exe
+  * unzip32.exe -- Optional to unpack the zip files under MS-DOS
+  * upx-3.96-dos.zip -- Optinal to pack the finished .exe file
   * vc405sw.zip -- Volkov Commander - SUPER OPTIONAL TO MANAGE FILES UNDER MS-DOS
 
 Install everything in your MS DOS box (or DOSBOX), test if the compiler works and is properly set-up per DJGPP instructions.
@@ -151,6 +151,11 @@ TODO needs to be ported yet
 
 TODO needs to be ported yet
 
+### Assets
+
+The Assets of the game, like graphics, sprites, fonts, etc are inside a single DAT file.
+
+That file was created with Allegro tool, 'grabber'. You can edit and modify it using that tool.
 
 ## Credits
 
