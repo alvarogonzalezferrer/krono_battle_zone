@@ -21,7 +21,7 @@ A 486DX2 with 8Mb of RAM or better is recommended, hard drive with 8Mb free and 
 
 ## Introduction
 
-Kronoman's Battle Zone, from now on 'KRBZ', is an action game for one or two players, where the objective is to eliminate the opponent.
+**Krono's Battle Zone** is an action game for one or two players, where the objective is to eliminate the opponent.
 
 There is no time limit, or number of deaths, leaving this at the players' decision.
 
@@ -33,9 +33,9 @@ You have various weapons and prizes to assist you in fighting your opponent.
 
 The game itself is controlled by the keyboard.
 
-During the game, press ESC to end the game, and PAUSE to pause the game (ENTER to continue).
+During the game, press **ESC** to end the game, and **PAUSE** to pause the game (**ENTER** to continue).
 
-In 'debug' mode, F9, F10, F11 and F12 do different things.
+In **'debug'** mode, **F9, F10, F11 and F12** do different things.
 
 ## Keys
 
