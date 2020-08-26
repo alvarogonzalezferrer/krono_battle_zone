@@ -194,9 +194,13 @@ Thanks to all my family, friends, and UADE fellow students.
 
 ## Donations
 
-If you find my code useful and want to donate, here is my address:
+If you want to help me continue with my work, you can donate via Bitcoin to my address, everything helps, it can be pennies, it doesn't matter!
 
-**TODO** - put btc address here
+**33Xh8YBQsMW8LGrnRR5wgEKXNzoaE5C95Q**
+
+![Wallet 33Xh8YBQsMW8LGrnRR5wgEKXNzoaE5C95Q](btc/wallet.png)
+
+**Thank you very much for your donation!**
 
 ## Contributing
 
