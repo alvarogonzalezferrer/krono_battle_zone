@@ -272,10 +272,10 @@ DIALOG cuadro_dialogo_1[] =
 
 // --------------------------------------------------------
     // setear las opciones del dialogo segun los seteos actuales
-    // nivel de detalle
-    if (MODO_DE_LUZ == 2)  cuadro_dialogo_1[2].flags |= D_SELECTED;
-    if (MODO_DE_LUZ == 3)  cuadro_dialogo_1[3].flags |= D_SELECTED;
-    if (MODO_DE_LUZ == 0)  cuadro_dialogo_1[4].flags |= D_SELECTED;
+    // nivel de detalle // 2026 patch
+    if (MODO_DE_LUZ == 3)  cuadro_dialogo_1[2].flags |= D_SELECTED; //minimo
+    if (MODO_DE_LUZ == 1)  cuadro_dialogo_1[3].flags |= D_SELECTED; //bajo
+    if (MODO_DE_LUZ == 0)  cuadro_dialogo_1[4].flags |= D_SELECTED; //normal
 
     // resolucion
     if ((H_RES==320) && (V_RES==200))  cuadro_dialogo_1[6].flags |= D_SELECTED;
@@ -306,7 +306,7 @@ DIALOG cuadro_dialogo_1[] =
     // ver que valores quedaron en los check boxs...
 
     // nivel de detalle grafico
-    if (cuadro_dialogo_1[2].flags & D_SELECTED)
+    if (cuadro_dialogo_1[2].flags & D_SELECTED) // minimo
        {
             // mostrar efectos de iluminacion? (afecta a la luz ambiental tambien)
             VER_LUCES = FALSE;
@@ -317,7 +317,7 @@ DIALOG cuadro_dialogo_1[] =
             // mostrar clima?
             VER_CLIMA = FALSE;
 
-            MODO_DE_LUZ = 2; // render pedorro!
+            MODO_DE_LUZ = 3; // render pedorro!
       }
     if (cuadro_dialogo_1[3].flags & D_SELECTED)
        {
@@ -326,7 +326,7 @@ DIALOG cuadro_dialogo_1[] =
             VER_EXPLO = TRUE;
             VER_CLIMA = TRUE;
             // metodo de render de las luces
-             MODO_DE_LUZ = 3; // render rapido
+             MODO_DE_LUZ = 1; // render rapido
       }
     if (cuadro_dialogo_1[4].flags & D_SELECTED)
        {
