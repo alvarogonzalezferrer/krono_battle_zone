@@ -727,26 +727,26 @@ int kredito_max = 20; // 1 menos que el indice
 // strings con los kreditos
 char *Kreditos[21] = {
 "Krono's Battle Zone",
-"Kreditos",
-"Una Produccion De KronoCorp",
-"Kreado Por Kronoman",
-"(c) Diciembre 2000 - Enero 2002",
-"Hecho En Argentina - Freeware",
+"Creditos",
+"Una Produccion De Kronoman",
+"Creado Por Kronoman",
+"(c) 2000 - 2026",
+"Hecho En Argentina",
 "Saludos A:",
-"Victoria",
+"Adriana",
 "Yaco",
 "SkaarjScout",
 "Iron Chelo",
 "Dj Nanga",
-"Poroto",
+"Slavic",
 "J Monytor",
 "BloodyMary",
 "El Mago Eddy",
 "Super666",
-"Veronica, Yunni y Claudia",
-"PROGRAMA FREEWARE (GRATIS)",
+"UADE Boyz",
+"PROGRAMA FREEWARE",
 "En memoria de mi padre",
-"(c) 2000-2002, KronoCorp"};
+"(c) 2000-2026, Kronoman"};
 
 // kredito actual
 int kredito_actual = 0;
