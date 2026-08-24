@@ -9,9 +9,12 @@ REM ---- 2020 ----
 REM Marzo 2020 - agregue salvar errores y warnings con REDIR -o etc 
 REM gcc -s -O3 -Wall principa.c -o  ..\bin\kronobz.exe -lalleg
 REM compilar
-echo Compilando... espere por favor
-gcc -v
+
+echo Compiling, wait please...
+
+REM gcc -v
 REM redir -o gcc_err.txt -eo 
+
 gcc -s -O3 -Wall principa.c -o  ..\bin\kronobz.exe -lalleg
 
 REM crear un exe stand alone, todo esto es opcional
@@ -21,5 +24,7 @@ REM UPX crashea DosBOX
 REM upx ..\bin\kronobz.exe
 REM del ..\bin\kronobz
 
+copy ..\bin\kronobz.exe ..\..\release\msdos_~1
 
+echo Ready... exe should be at bin and release
 
