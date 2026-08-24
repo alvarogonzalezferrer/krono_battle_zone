@@ -207,7 +207,7 @@ if (i4 < i2) i4++;
 if (i4 > i2) i4--;
 
 if (i5 < i3) i5++;
-if (i5 < i3) i5++;
+if (i5 > i3) i5--;
         // setea el terreno
         grilla_map[i4][i5] = i6;
         // energia en relacion...

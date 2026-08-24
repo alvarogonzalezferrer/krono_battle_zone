@@ -176,7 +176,7 @@ for (i1=0; i1 < MAX_SHOOTS ; i1++)
 
     // ver si se salio de pantalla, matar pasando vida a 0...
     if ((dispa[i1][i2].x<0) || (dispa[i1][i2].y<0)
-       || (dispa[i1][i2].x>1000) || (dispa[i1][i2].x>1000)) dispa[i1][i2].vida = 0;
+       || (dispa[i1][i2].x>1000) || (dispa[i1][i2].y>1000)) dispa[i1][i2].vida = 0; // bugfix 2026
 
 
     // restar vida - 1
