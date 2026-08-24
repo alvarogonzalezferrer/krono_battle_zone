@@ -9,7 +9,7 @@
 // ** NOTA ** CON <F12> PODES ACTIVAR EL CONTADOR DE FPS EN PANTALLA
 //--------------------------------------------------------
 // KRONOMAN'S BATTLE ZONE
-// Kreado por Kronoman
+// Creado por Kronoman
 // Empezado 31-D-2000
 // Este archivo: 7-E-2001 21.00 pm
 // Codigo en lenguaje DJGPP + Allegro

@@ -9,7 +9,7 @@
 //
 // Juego al estilo del viejo BATTLE ZONE
 //
-// Kreado por Kronoman
+// Creado por Kronoman
 // Trabaja en modo X de 320x240x256c y 320x480 (en modo de 2 jugadores)
 // Empezado 31-D-2000
 // Este archivo: 3-E-2001 4.30 am
@@ -86,7 +86,7 @@ int C_Frases = 19;
         // linea superior con azul, etc
         gotoxy(1,1);
         cprintf("Kronoman's Battle Zone                                                         \n\r");
-        cprintf("Kreado por Kronoman - (c) 2000,2001,2002 - Freeware (Gratuito)                 \n\r");
+        cprintf("Creado por Kronoman - (c) 2000-2026 - Freeware                                 \n\r");
         cprintf("En memoria de mi querido padre                                                 \n\r");
         textcolor(WHITE); textbackground(BLACK);
 
@@ -246,7 +246,7 @@ for (i1=1; i1<argc; i1++) {
         gotoxy(1,1);
         cprintf("Kronoman's Battle Zone                                                          ");
         gotoxy(1,23);
-        cprintf("Kreado por Kronoman - (c) 2001                                                  ");
+        cprintf("Creado por Kronoman - (c) 2001-2026                                             ");
 
 // ventana de texto comun de la 3ra linea a casi la ultima
         window(1, 3, 80, 22);

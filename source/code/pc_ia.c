@@ -104,37 +104,38 @@ double t;
 
 // ver alineacion vertical
 if ( (x1 > x2 - 1) &&
-     (x1 < x2 + 1) ) {
+     (x1 < x2 + 1) ) 
+   {
      // ver arriba, abajo
-     if (y1 > y2) { // enemigo abajo
-            return pasa360a255(al_azar(80,100));
-     } else { // enemigo arriba
-            return pasa360a255(al_azar(260,280));
-     }
+     if (y1 > y2)  // enemigo abajo
+        return pasa360a255(al_azar(80,100));
+      else  // enemigo arriba
+		return pasa360a255(al_azar(260,280));    
    } // fin alineacion vertical
 
 // ver alineacion horizontal
 if ( (y1 > y2 - 1) &&
-     (y1 < y2 + 1) ) {
+     (y1 < y2 + 1) ) 
+	{
      // ver derecha, izquierda
-     if (x1 < x2) { // enemigo izquierda
-            return pasa360a255(al_azar(170,190));
-     } else { // enemigo derecha
-            return pasa360a255(al_azar(370, 380));
-     }
+     if (x1 < x2) // enemigo izquierda
+        return pasa360a255(al_azar(170,190));
+      else  // enemigo derecha
+        return pasa360a255(al_azar(370, 380)); 
    } // fin alineacion horizontal
    
    
-/***************** modo viejo
 // ver cuadrantes diagonales
 // usar la arcotangente
 // primero saco la tangente (y2-y1) / (x2-x1)
     d1 = (x2 - x1);
 
     if (d1 == 0) // evitar bug con tangente indeterminada
-        {
-        if (y2 < y1 ) { return pasa360a255(270) ;} else {return pasa360a255(90);} // estan al reves, a proposito!
-        }
+        if (y2 < y1 ) 
+			return pasa360a255(270);
+		else 
+			return pasa360a255(90); // estan al reves, a proposito!
+        
 
     t = (y2 - y1) ;
     t = t / (double) d1;  // el cast (double) es MUY importante!
@@ -143,19 +144,20 @@ if ( (y1 > y2 - 1) &&
     d1 = arregla_ang((int) t); // redondea
 
     // DEBUG - cambiar cuadrante (90 = 270!)
-    if (x1 < x2 ) d1 = arregla_ang(d1 - 180);
-******************/
+    if (x1 < x2 ) 
+		d1 = arregla_ang(d1 - 180);
 
+/** este parche de claude me rompio el bot, vuelvo a la version 2000 
 	// parche 2026 con IA 
 	// atan2 ya maneja correctamente los 4 cuadrantes y los casos
     // de alineacion vertical/horizontal (dx=0 o dy=0), asi que no
     // hacen falta los ifs especiales que tenia antes.
     t = atan2((double)(y2 - y1), (double)(x2 - x1));
     t = t / KRONO_PI; // rad -> grados (0-360)
+****/
 
     d1 = arregla_ang((int) t);
 
- 
     return pasa360a255(d1);
 }
 

@@ -6,7 +6,7 @@
 //          Ademas, contiene el manual principal de juego.-
 //--------------------------------------------------------
 // KRONOMAN'S BATTLE ZONE
-// Kreado por Kronoman
+// Creado por Kronoman
 // Empezado 31-D-2000
 // Este archivo: 4-E-2001 2.15 am
 // Codigo en lenguaje DJGPP + Allegro
