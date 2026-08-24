@@ -4,7 +4,9 @@ Tank battle for 2 players, split-screen, hot-seat, or vs computer.
 
 For DOSBOX / MS-DOS, made with C, DJGPP + Allegro 4.
 
-Year 2001 - Released to the public March 2020
+Made in year 2001 on a 486 DX2
+
+First Released to the public March 2020
 
 ## Features
 
@@ -27,19 +29,6 @@ Playing the game
 ![Battle zone!](screenshoots/movie03.gif)
 
 
-## Requirements
-
-(**Old info**, year 2020 I recommend to use **DOSBOX emulator** instead of a real DOS machine)
-
-Year 2020+ : GET https://www.dosbox.com/ and use the game there
-
-If you're a retro purist, use real MS-DOS hardware:
-
-The game requires a 386 with 4Mb of RAM, a hard drive with 2Mb free, DOS operating system and VGA video card with a resolution of 320x240
-256 colors.
-
-A 486DX2 with 8Mb of RAM or better is recommended, hard drive with 8Mb free and DOS 6.0 or higher operating system, and VESA 2.0 video card at 640x480 with 256 colors.
-
 ## Introduction
 
 **Krono's Battle Zone** is an action game for one or two players, where the objective is to eliminate the opponent.
@@ -49,6 +38,19 @@ There is no time limit, or number of deaths, leaving this at the players' decisi
 It is mainly intended for two players to play, but It can also be played against the computer.
 
 You have various weapons and prizes to assist you in fighting your opponent.
+
+## Requirements
+
+(**Old info**, year 2020 I recommend to use **DOSBOX emulator** instead of a real DOS machine)
+
+Year 2020+ : GET https://dosbox-x.com/ and use the game there
+
+If you're a retro purist, use real MS-DOS hardware:
+
+The game requires a 386 with 4Mb of RAM, a hard drive with 2Mb free, DOS operating system and VGA video card with a resolution of 320x240
+256 colors.
+
+A 486DX2 with 8Mb of RAM or better is recommended, hard drive with 8Mb free and DOS 6.0 or higher operating system, and VESA 2.0 video card at 640x480 with 256 colors.
 
 ## How to play
 
@@ -66,20 +68,20 @@ The player keys are:
 
 Top screen, or full screen in case of playing vs CPU
 
-Move tank: **LEFT, RIGHT, UP, DOWN** arrows
+Move tank: **LEFT, RIGHT, UP, DOWN** arrows or **4,8,2,5,6 on keypad**
 
 Turret: **INSERT** shoot, **DELETE** turn on / off lights (night only),
-        **HOME, PG_UP** rotate turret
+        **HOME, PG_UP** rotate turret, or **keypad 0,7,9,3** can also be used
 
 ### Player 2
 
 Lower screen
 
-Move tank: **U, H, K, J**
-Turret: **Q** shoot, **A** turn on / off lights (night only),
-		**W, E** rotate turret
+Move tank: **W, S, A, D**
+Turret: **R** shoot, **F** turn on / off lights (night only),
+		**Q, E** rotate turret
 
-If you are watching a demo, ESC ends the demo.
+If you are watching a demo, **ESC** ends the demo.
 
 ## Command line parameters
 
