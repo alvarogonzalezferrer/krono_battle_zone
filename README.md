@@ -70,7 +70,7 @@ Top screen, or full screen in case of playing vs CPU
 
 Move tank: **LEFT, RIGHT, UP, DOWN** arrows or **4,8,2,5,6 on keypad**
 
-Turret: **INSERT** shoot, **DELETE** turn on / off lights (night only),
+Turret: **INSERT** or **KEYPAD 0** or **KEYPAD ENTER** shoot, **DELETE** or **KEYPAD 3** turn on / off lights (night only),
         **HOME, PG_UP** rotate turret, or **keypad 0,7,9,3** can also be used
 
 ### Player 2
