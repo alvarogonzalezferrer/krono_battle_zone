@@ -697,7 +697,10 @@ clear_keybuf(); // limpiar teclado
 
 // libera los bitmaps
 destroy_bitmap(bmptmp1);
-destroy_bitmap(bmptmp2);
+//destroy_bitmap(bmptmp2); // 2026 patch 
+// bmptmp2 NO se destruye: es un bitmap del datafile (krono_dato), no uno creado por vos.
+// destruirlo corrompe el datafile y puede tirar abajo el cursor del mouse en cualquier
+// pantalla posterior que lo vuelva a usar.
 
 // hace un fade out
 fade_out(8);
