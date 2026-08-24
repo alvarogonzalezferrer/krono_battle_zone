@@ -123,7 +123,9 @@ if ( (y1 > y2 - 1) &&
             return pasa360a255(al_azar(370, 380));
      }
    } // fin alineacion horizontal
-
+   
+   
+/***************** modo viejo
 // ver cuadrantes diagonales
 // usar la arcotangente
 // primero saco la tangente (y2-y1) / (x2-x1)
@@ -142,11 +144,19 @@ if ( (y1 > y2 - 1) &&
 
     // DEBUG - cambiar cuadrante (90 = 270!)
     if (x1 < x2 ) d1 = arregla_ang(d1 - 180);
+******************/
 
+	// parche 2026 con IA 
+	// atan2 ya maneja correctamente los 4 cuadrantes y los casos
+    // de alineacion vertical/horizontal (dx=0 o dy=0), asi que no
+    // hacen falta los ifs especiales que tenia antes.
+    t = atan2((double)(y2 - y1), (double)(x2 - x1));
+    t = t / KRONO_PI; // rad -> grados (0-360)
 
+    d1 = arregla_ang((int) t);
 
+ 
     return pasa360a255(d1);
-
 }
 
 

@@ -208,6 +208,7 @@ void realizar_pausa()
     clear_keybuf();
 
     instalar_timers();
+	
     game_time = -1; // para que redibuje
 
     clear(screen); // oops!
@@ -540,208 +541,218 @@ if ( ( JUG_HUMANO[1] == FALSE ) &&  ( JUG_HUMANO[2] == FALSE ) )
 void Leer_Teclado()
 {
 
-// salir del juego
-if (key[KEY_ESC]) {
-        // insertar un cuadro de dialogo AQUI
-        // preguntando si se quiere salir, bla bla bla...
-        Fin_Juego = TRUE;
-        }
+	// salir del juego
+	if (key[KEY_ESC]) {
+			// insertar un cuadro de dialogo AQUI
+			// preguntando si se quiere salir, bla bla bla...
+			Fin_Juego = TRUE;
+			}
 
-// pausa: tecla pausa
-if (key[KEY_PAUSE] )
-   {
-   key[KEY_PAUSE] = FALSE;
-   realizar_pausa();
-   }
+	// pausa: tecla pausa
+	if (key[KEY_PAUSE] )
+	   {
+			key[KEY_PAUSE] = FALSE;
+			realizar_pausa();
+	   }
 
-// DEBUG - activar FPS con <F12>
-if (key[KEY_F12])
-         {
-          MOSTRAR_FPS = !MOSTRAR_FPS;
-          key[KEY_F12] = FALSE;
-         }
-// DEBUG - REMOVER!!! AL APRETAR <F11>, cambiar el arma de los tanques!
-// Solo anda si se paso el parametro -debug!
-if (key[KEY_F11] && K_DEBUG)
-         {
-          jugador_info[1].arma++;
-          jugador_info[2].arma++;
-          jugador_info[1].balas = random()%50 + 50;
-          jugador_info[2].balas = random()%50 + 50;
+	// DEBUG - activar FPS con <F12>
+	if (key[KEY_F12])
+		{
+			  MOSTRAR_FPS = !MOSTRAR_FPS;
+			  key[KEY_F12] = FALSE;
+		}
+			 
+	// DEBUG - REMOVER!!! AL APRETAR <F11>, cambiar el arma de los tanques!
+	// Solo anda si se paso el parametro -debug!
+	if (key[KEY_F11] && K_DEBUG)
+			 {
+			  jugador_info[1].arma++;
+			  jugador_info[2].arma++;
+			  jugador_info[1].balas = random()%50 + 50;
+			  jugador_info[2].balas = random()%50 + 50;
 
-          if (jugador_info[1].arma > (CANTIDAD_DE_ARMAS-1)) jugador_info[1].arma=0;
-          if (jugador_info[2].arma > (CANTIDAD_DE_ARMAS-1)) jugador_info[2].arma=0;
-          key[KEY_F11] = FALSE;
-         }
-// DEBUG - F9 cambia el jugador 2 a humano/PC
-if (key[KEY_F9] && K_DEBUG)
-   {
-   JUG_HUMANO[2] = !JUG_HUMANO[2];
-   key[KEY_F9] = FALSE;
-   }
+			  if (jugador_info[1].arma > (CANTIDAD_DE_ARMAS-1)) jugador_info[1].arma=0;
+			  if (jugador_info[2].arma > (CANTIDAD_DE_ARMAS-1)) jugador_info[2].arma=0;
+			  key[KEY_F11] = FALSE;
+			 }
+	// DEBUG - F9 cambia el jugador 2 a humano/PC
+	if (key[KEY_F9] && K_DEBUG)
+	   {
+	   JUG_HUMANO[2] = !JUG_HUMANO[2];
+	   key[KEY_F9] = FALSE;
+	   }
 
-// DEBUG - F10 cambia el jugador 1 a humano/PC
-if (key[KEY_F10] && K_DEBUG)
-   {
-   JUG_HUMANO[1] = !JUG_HUMANO[1];
-   key[KEY_F10] = FALSE;
-   }
+	// DEBUG - F10 cambia el jugador 1 a humano/PC
+	if (key[KEY_F10] && K_DEBUG)
+	   {
+	   JUG_HUMANO[1] = !JUG_HUMANO[1];
+	   key[KEY_F10] = FALSE;
+	   }
 
 
 // **************************
 // JUGADOR #1
 // FLECHAS: MOVER - INS: Dispara
 // HOM, PgUp: Mover torreta - Del: Apagar/prender luz  
+
+// tambien se puede jugar con keypad (agregado 2026)
 if (JUG_HUMANO[1] && (jugador_info[1].energia > -1)) {
 
 // DISPARAR 
-if (key[KEY_INSERT])
+	if (key[KEY_INSERT] || key[KEY_0_PAD] || key[KEY_ENTER_PAD])
            {
             // Agrego un disparo en la punta de la torreta
             combo_disparar(1, deciseg);
 //           key[KEY_INSERT] = FALSE;
            }
 
-// apagar/prender luz (ON/OFF) [util para estrategia nocturna]
-if (key[KEY_DEL])
+	// apagar/prender luz (ON/OFF) [util para estrategia nocturna]
+	if (key[KEY_DEL] || key[KEY_3_PAD] || key[KEY_MINUS_PAD])
           {
           key[KEY_DEL] = FALSE;
+		  key[KEY_3_PAD] = FALSE;
+		  key[KEY_MINUS_PAD] = FALSE;
+		  
           jugador_info[1].luz_prendida = !jugador_info[1].luz_prendida;
           }
-        // acelerar: si tiene el premio, es doble!
-        if (key[KEY_UP]) {
-	         jugador_info[1].vel += ACC_TA;
-             if (  jugador_info[1].premio == VELOCIDAD_SPR ) jugador_info[1].vel += ACC_TA * 2;
-          }; // fin acelera
+		  
+	// acelerar: si tiene el premio, es triple!
+	if (key[KEY_UP] || key[KEY_8_PAD]) {
+		 jugador_info[1].vel += ACC_TA;
+		 if (  jugador_info[1].premio == VELOCIDAD_SPR ) 
+			 jugador_info[1].vel += ACC_TA * 2;
+	  }; // fin acelera
 
-        // frenar:
-        if (key[KEY_DOWN]) {
- 	         jugador_info[1].vel -= ACC_TA;
-             if (  jugador_info[1].premio == VELOCIDAD_SPR ) jugador_info[1].vel -= ACC_TA * 2;
-          }; // fin freno
+	// frenar:
+	if (key[KEY_DOWN] || key[KEY_5_PAD] || key[KEY_2_PAD] ) {
+		 jugador_info[1].vel -= ACC_TA;
+		 if (  jugador_info[1].premio == VELOCIDAD_SPR ) jugador_info[1].vel -= ACC_TA * 2;
+	  }; // fin freno
 
-        // doblar derecha
-        if (key[KEY_RIGHT]) {
-	               jugador_info[1].ang_dir += VEL_GTA;
-                  if (jugador_info[1].ang_dir >  255) jugador_info[1].ang_dir -= 255;
-              // si la nueva posicion es valida, mover la torreta
-              // acompa¤ando el giro
-              if (validar_posicion(1)) {
-                       jugador_info[1].ang_tor += VEL_GTA; 
-                       if (jugador_info[1].ang_tor >  255) jugador_info[1].ang_tor -= 255;
-                                       }; 
-          }; // fin derecha
+	// doblar derecha
+	if (key[KEY_RIGHT] || key[KEY_6_PAD]) {
+			   jugador_info[1].ang_dir += VEL_GTA;
+			  if (jugador_info[1].ang_dir >  255) jugador_info[1].ang_dir -= 255;
+		  // si la nueva posicion es valida, mover la torreta
+		  // acompa¤ando el giro
+		  if (validar_posicion(1)) {
+				   jugador_info[1].ang_tor += VEL_GTA; 
+				   if (jugador_info[1].ang_tor >  255) jugador_info[1].ang_tor -= 255;
+								   }; 
+	  }; // fin derecha
 
-        // doblar izquierda
-        if (key[KEY_LEFT]) {
-	             jugador_info[1].ang_dir -= VEL_GTA;
-                if (jugador_info[1].ang_dir < 0) jugador_info[1].ang_dir += 255;
-              // si la nueva posicion es valida, mover la torreta
-              // acompa¤ando el giro
-              if (validar_posicion(1)) {
-                       jugador_info[1].ang_tor -= VEL_GTA; 
-                       if (jugador_info[1].ang_tor < 0) jugador_info[1].ang_tor += 255;
-                                       }; 
-          }; // fin izquierda
+	// doblar izquierda
+	if (key[KEY_LEFT] || key[KEY_4_PAD]) {
+			 jugador_info[1].ang_dir -= VEL_GTA;
+			if (jugador_info[1].ang_dir < 0) jugador_info[1].ang_dir += 255;
+		  // si la nueva posicion es valida, mover la torreta
+		  // acompa¤ando el giro
+		  if (validar_posicion(1)) {
+				   jugador_info[1].ang_tor -= VEL_GTA; 
+				   if (jugador_info[1].ang_tor < 0) jugador_info[1].ang_tor += 255;
+								   }; 
+	  }; // fin izquierda
 
-        // -- TORRETA --
-        // MOVER DERECHA  
-        if (key[KEY_PGUP]) {
-               jugador_info[1].ang_tor += VEL_GTO; 
-               if (jugador_info[1].ang_tor > 255) jugador_info[1].ang_tor -= 255;
-               validar_posicion(1);
-          }; // fin izquierda
+	// -- TORRETA --
+	// MOVER DERECHA  
+	if (key[KEY_PGUP] || key[KEY_9_PAD] ) {
+		   jugador_info[1].ang_tor += VEL_GTO; 
+		   if (jugador_info[1].ang_tor > 255) jugador_info[1].ang_tor -= 255;
+		   validar_posicion(1);
+	  }; // fin izquierda
 
-        // MOVER IZQUIERDA
-        if (key[KEY_HOME]) {
-              jugador_info[1].ang_tor -= VEL_GTO; 
-              if (jugador_info[1].ang_tor < 0) jugador_info[1].ang_tor += 255;
-              validar_posicion(1);
-          }; // fin izquierda
-
-
+	// MOVER IZQUIERDA
+	if (key[KEY_HOME] || key[KEY_7_PAD] ) {
+		  jugador_info[1].ang_tor -= VEL_GTO; 
+		  if (jugador_info[1].ang_tor < 0) jugador_info[1].ang_tor += 255;
+		  validar_posicion(1);
+	  }; // fin izquierda
 }
 else // si no, lo controla el PC
 {
-   // DEBUG
    // LLAMAR A LA RUTINA DE I.A AQUI (INTELIGENCIA ARTIFICIAL)
    // SOLO SI jugador_info[1].energia > -1
-   if (jugador_info[1].energia > -1) mover_IA(1, deciseg);
+   if (jugador_info[1].energia > -1) 
+	   mover_IA(1, deciseg);
 } // fin de if (JUG_HUMANO[1])
 
 // *************************************************************
 // JUGADOR #2
-// A,S,D,W: MOVER - U: Dispara
-// I, O: Mover torreta - J: Apagar/prender luz 
+// A,S,D,W: MOVER - R: Dispara
+// Q, E: Mover torreta - F: Apagar/prender luz 
 if (JUG_HUMANO[2] && (jugador_info[2].energia > -1)) {
 
 // NOTAR QUE ESTO ES TEMPORAL
 // ACTUALIZAR CON EL DEL JUGADOR #1!!!!
 
-// DISPARAR 
-if (key[KEY_Q])
-           {
-            combo_disparar(2, deciseg);
-//          key[KEY_Q] = FALSE;
-           }
+	// DISPARAR 
+	if (key[KEY_R])
+	   {
+		combo_disparar(2, deciseg);
+//          key[KEY_R] = FALSE;
+	   }
 
-// apagar/prender luz (ON/OFF) [util para estrategia nocturna]
-if (key[KEY_A])
-          {
-          key[KEY_A] = FALSE;
-          jugador_info[2].luz_prendida = !jugador_info[2].luz_prendida;
-          }
-        // acelerar: si tiene premio, es mas rapido
-        if (key[KEY_U]) {
-        jugador_info[2].vel += ACC_TA;
-             if (  jugador_info[2].premio == VELOCIDAD_SPR ) jugador_info[2].vel += ACC_TA * 2;
+	// apagar/prender luz (ON/OFF) [util para estrategia nocturna]
+	if (key[KEY_F])
+		{
+		  key[KEY_F] = FALSE;
+		  jugador_info[2].luz_prendida = !jugador_info[2].luz_prendida;
+		}
 
-          }; // fin acelera
+	// acelerar: si tiene premio, es mas rapido
+	if (key[KEY_W]) 
+	{
+		jugador_info[2].vel += ACC_TA;
+		 if (  jugador_info[2].premio == VELOCIDAD_SPR ) 
+			 jugador_info[2].vel += ACC_TA * 2;
+	}; // fin acelera
 
-        // frenar:
-        if (key[KEY_J]) {
-        jugador_info[2].vel -= ACC_TA;
-             if (  jugador_info[2].premio == VELOCIDAD_SPR ) jugador_info[2].vel -= ACC_TA * 2;
-          }; // fin freno
+	// frenar:
+	if (key[KEY_S]) {
+	jugador_info[2].vel -= ACC_TA;
+		 if (  jugador_info[2].premio == VELOCIDAD_SPR ) jugador_info[2].vel -= ACC_TA * 2;
+	  }; // fin freno
 
-        // doblar derecha
-        if (key[KEY_K]) {
-        jugador_info[2].ang_dir += VEL_GTA;
-        if (jugador_info[2].ang_dir >  255) jugador_info[2].ang_dir -= 255;
-              // si la nueva posicion es valida, mover la torreta
-              // acompa¤ando el giro
-              if (validar_posicion(2)) {
-                       jugador_info[2].ang_tor += VEL_GTA; 
-                       if (jugador_info[2].ang_tor >  255) jugador_info[2].ang_tor -= 255;
-                                       }; 
-          }; // fin derecha
+	// doblar derecha
+	if (key[KEY_D]) {
+		jugador_info[2].ang_dir += VEL_GTA;
+		if (jugador_info[2].ang_dir >  255) jugador_info[2].ang_dir -= 255;
+			  // si la nueva posicion es valida, mover la torreta
+			  // acompa¤ando el giro
+			  if (validar_posicion(2)) 
+				{
+				   jugador_info[2].ang_tor += VEL_GTA;    
+				   if (jugador_info[2].ang_tor >  255) jugador_info[2].ang_tor -= 255;
+				}; 
+	  }; // fin derecha
 
-        // doblar izquierda
-        if (key[KEY_H]) {
-        jugador_info[2].ang_dir -= VEL_GTA;
-                if (jugador_info[2].ang_dir < 0) jugador_info[2].ang_dir += 255;
-              // si la nueva posicion es valida, mover la torreta
-              // acompa¤ando el giro
-              if (validar_posicion(2)) {
-                       jugador_info[2].ang_tor -= VEL_GTA; 
-                       if (jugador_info[2].ang_tor < 0) jugador_info[2].ang_tor += 255;
-                                       }; 
-          }; // fin izquierda
+	// doblar izquierda
+	if (key[KEY_A]) {
+		jugador_info[2].ang_dir -= VEL_GTA;
+		if (jugador_info[2].ang_dir < 0) jugador_info[2].ang_dir += 255;
+		  // si la nueva posicion es valida, mover la torreta
+		  // acompa¤ando el giro
+		if (validar_posicion(2)) 
+		{
+		   jugador_info[2].ang_tor -= VEL_GTA; 
+		   if (jugador_info[2].ang_tor < 0) jugador_info[2].ang_tor += 255;
+		   }; 
+	  }; // fin izquierda
 
-        // -- TORRETA --
-        // MOVER DERECHA  
-        if (key[KEY_E]) {
-               jugador_info[2].ang_tor += VEL_GTO; 
-               if (jugador_info[2].ang_tor > 255) jugador_info[2].ang_tor -= 255;
-               validar_posicion(2);
-          }; // fin izquierda
+	// -- TORRETA --
+	// MOVER DERECHA  
+	if (key[KEY_E]) {
+		   jugador_info[2].ang_tor += VEL_GTO; 
+		   if (jugador_info[2].ang_tor > 255) jugador_info[2].ang_tor -= 255;
+		   validar_posicion(2);
+	  }; // fin izquierda
 
-        // MOVER IZQUIERDA
-        if (key[KEY_W]) {
-              jugador_info[2].ang_tor -= VEL_GTO; 
-              if (jugador_info[2].ang_tor < 0) jugador_info[2].ang_tor += 255;
-              validar_posicion(2);
-          }; // fin izquierda
+	// MOVER IZQUIERDA
+	if (key[KEY_Q]) {
+		  jugador_info[2].ang_tor -= VEL_GTO; 
+		  if (jugador_info[2].ang_tor < 0) jugador_info[2].ang_tor += 255;
+		  validar_posicion(2);
+	  }; // fin izquierda
 
 }
 else // si no, lo controla el PC
