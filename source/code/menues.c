@@ -267,7 +267,7 @@ DIALOG cuadro_dialogo_1[] =
 
     // mostrar mouse
     set_mouse_sprite(krono_dato[KMousePuntero].dat);
-    show_mouse(screen);
+    //show_mouse(screen); // 2026?
 
 
 // --------------------------------------------------------
